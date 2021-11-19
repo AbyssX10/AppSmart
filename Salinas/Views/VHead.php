@@ -4,3 +4,4 @@
 <link rel="stylesheet" href="css/index.css">
 <link rel="icon" href="imgs/icon.png">
 <title>Ferrexito - La Quinta</title>
+<title>PruebaGithub</title>
