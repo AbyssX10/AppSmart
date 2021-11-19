@@ -13,9 +13,7 @@
          * 
          * false: Si no encontro coincidencia alguna
          * 
-         * @author Jose Luis Salinas
-         * @author Katerin Vanesa Vega Roa
-         * @author Jhon Mario Diaz Bustos
+         * @author Jose Luis Salinas, Katerin Vega Roa, Jhon Mario Díaz
          */
         public function LoginUser($pTxtCorreo, $pTxtPassword) : bool;
 
@@ -29,9 +27,7 @@
          * 
          * false: Si se presentó algún problema con el nuevo registro.
          * 
-         * @author Jose Luis Salinas
-         * @author Katerin Vanesa Vega Roa
-         * @author Jhon Mario Diaz Bustos
+         * @author Jose Luis Salinas, Katerin Vega Roa, Jhon Mario Díaz
          */
         public function RegisterUser($pTxtCorreo, $pTxtPassword, $pTxtRolUser, $pTxtDNI, $pTxtNombre, $pTxtTelefono, $pTxtDireccion) : bool;
         
@@ -43,11 +39,9 @@
          * 
          * @var nombreUser correoUser
          * @var rolUser  rol
-         * @author Jose Luis Salinas
-         * @author Katerin Vanesa Vega Roa
-         * @author Jhon Mario Diaz Bustos
+         * @author Jose Luis Salinas, Katerin Vega Roa, Jhon Mario Díaz
          */
-        public function FindUserByEmail($pTxtCorreo) : array; /* Fix */
+        public function FindUserByEmail($pTxtCorreo) : array; /* Fixed */
 
         /**
          * Verify User Exists
@@ -57,11 +51,9 @@
          * si el correo existe pero la contraseña no coincide con la del registro, retornará un mensaje diciendo que la
          * contraseña es incorrecta. Esta función retorna un string con dicho mensaje de notificación.
          * 
-         * @author Jose Luis Salinas
-         * @author Katerin Vanesa Vega Roa
-         * @author Jhon Mario Diaz Bustos
+         * @author Jose Luis Salinas, Katerin Vega Roa, Jhon Mario Díaz
          */
-        public function VerifyUserExists($pTxtCorreo, $pTxtPassword) : string; /* Fix */
+        public function VerifyUserExists($pTxtCorreo, $pTxtPassword) : string; /* Fixed */
 
         /**
          * Get All
@@ -85,11 +77,9 @@
          * 
          * false: Si ocurrió algún error durante el proceso de eliminación.
          * 
-         * @author Jose Luis Salinas
-         * @author Katerin Vanesa Vega Roa
-         * @author Jhon Mario Diaz Bustos
+         * @author Jose Luis Salinas, Katerin Vega Roa, Jhon Mario Díaz
          */
-        public function DeleteUserByEmail($pTxtCorreo) : bool; /* Fix */
+        public function DeleteUserByEmail($pTxtCorreo) : bool; /* Fixed */
 
         /* PROVIDERS */
 

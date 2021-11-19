@@ -67,7 +67,7 @@
         }
 
         private function DeleteUser($pTxtCorreo){
-            if ($this->connect->query("DELETE FROM users WHERE correoUser = '$pTxtCorreo'")){
+            if ($this->connect->query("DELETE u, p FROM users u INNER JOIN person p ON u.dniPerson = p.dniPerson WHERE u.correoUser = '$pTxtCorreo'")){
                 return true;
             } else {
                 return false;

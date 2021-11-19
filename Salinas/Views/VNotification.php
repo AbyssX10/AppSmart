@@ -38,7 +38,7 @@
         $txtCorreo = $_POST["txtCorreo"];
         $txtPassword = md5($_POST["txtPassword"]);
 
-        //$config->RegisterUser($txtCorreo, $txtPassword, "Empleado", "287984443125216148", "Carmen Elena Salinas", "3206909714", "Mz 5");
+        //$config->RegisterUser($txtCorreo, $txtPassword, "Empleado", "28798444", "Carmen Elena Salinas", "3206909714", "Mz 5");
 
         if ($config->LoginUser($txtCorreo, $txtPassword)){
             $data->SetSession("user", $config->FindUserByEmail($txtCorreo));
