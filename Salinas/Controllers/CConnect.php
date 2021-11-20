@@ -91,11 +91,65 @@
             }
         }
 
+        private function FindProviderByNameInfo($pNombre){
+            if ($fila = mysqli_fetch_array($this->connect->query("SELECT * FROM providers WHERE nombreProveedor = '$pNombre'"))){
+                return $fila;
+            }
+        }
+
         private function DeleteProvider($pNombre, $pContacto){
             if ($this->connect->query("DELETE FROM providers WHERE nombreProveedor = '$pNombre' AND nombreContacto = '$pContacto'")){
                 return true;
             } else {
                 return false;
+            }
+        }
+
+        // Categories
+        private function AddCategoryInfo($pNombre){
+            if ($this->connect->query("INSERT INTO category (nombreCategoria) VALUES ('$pNombre')")){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        private function GetAllCategoriesInfo(){
+            if ($result = $this->connect->query("SELECT * FROM category")){
+                return $result;
+            } else {
+                return null;
+            }
+        }
+
+        private function FindCategoryByNameInfo($pNombre){
+            if ($fila = mysqli_fetch_array($this->connect->query("SELECT * FROM category WHERE nombreCategoria = '$pNombre'"))){
+                return $fila;
+            }
+        }
+
+        private function DeleteCategoryByNameInfo($pNombre){
+            if ($this->connect->query("DELETE FROM category WHERE nombreCategoria = '$pNombre'")){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        // Product
+        private function AddProductInfo($pNombre, $pCantidad, $pPrecioUnitario, $pReferencia, $pFoto, $pIdProveedor, $pIdCategoria){
+            if ($this->connect->query("INSERT INTO products (nombreProducto, cantidadProducto, precioUnitario, referenciaProducto, fotoProducto, idProveedor, idCategoria) VALUES ('$pNombre', '$pCantidad', '$pPrecioUnitario', '$pReferencia', '$pFoto', '$pIdProveedor', '$pIdCategoria')")){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        private function GetAllProductsInfo(){
+            if ($result = $this->connect->query("SELECT * FROM products")){
+                return $result;
+            } else {
+                return null;
             }
         }
 
@@ -126,6 +180,11 @@
             return $this->GetAllUsers($pTxtRol);
         }
 
+        public function FindProviderByName($pNombre): array
+        {
+            return $this->FindProviderByNameInfo($pNombre);
+        }
+
         public function DeleteUserByEmail($pTxtCorreo) : bool
         {
             return $this->DeleteUser($pTxtCorreo);
@@ -145,6 +204,38 @@
         public function DeleteProviderByNameAndContact($pNombre, $pContacto): bool
         {
             return $this->DeleteProvider($pNombre, $pContacto);
+        }
+
+        // Categories
+        public function AddCategory($pNombre): bool
+        {
+            return $this->AddCategoryInfo($pNombre);
+        }
+
+        public function GetAllCategories()
+        {
+            return $this->GetAllCategoriesInfo();
+        }
+
+        public function FindCategoryByName($pNombre): array
+        {
+            return $this->FindCategoryByNameInfo($pNombre);
+        }
+
+        public function DeleteCategoryByName($pNombre): bool
+        {
+            return $this->DeleteCategoryByNameInfo($pNombre);
+        }
+
+        // Product
+        public function AddProduct($pNombre, $pCantidad, $pPrecioUnitario, $pReferencia, $pFoto, $pIdProveedor, $pIdCategoria): bool
+        {
+            return $this->AddProductInfo($pNombre, $pCantidad, $pPrecioUnitario, $pReferencia, $pFoto, $pIdProveedor, $pIdCategoria);
+        }
+
+        public function GetAllProducts()
+        {
+            return $this->GetAllProductsInfo();
         }
     }
 

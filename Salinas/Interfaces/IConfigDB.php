@@ -85,7 +85,20 @@
 
         public function AddProvider($pNombre, $pDireccion, $pCiudad, $pTelefono, $pNombreContacto) : bool;
         public function GetAllProviders();
+        public function FindProviderByName($pNombre) : array;
         public function DeleteProviderByNameAndContact($pNombre, $pContacto) : bool;
-    }
+
+        /* CATEGORY */
+
+        public function AddCategory($pNombre) : bool;
+        public function GetAllCategories();
+        public function FindCategoryByName($pNombre) : array;
+        public function DeleteCategoryByName($pNombre) : bool;
+
+        /* PRODUCTS */
+        
+        public function AddProduct($pNombre, $pCantidad, $pPrecioUnitario, $pReferencia, $pFoto, $pIdProveedor, $pIdCategoria) : bool;
+        public function GetAllProducts();
+     }
 
 ?>

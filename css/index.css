@@ -763,91 +763,37 @@ body .content-cms .content-screen .content-products .contenido{
     box-shadow: 0 0 20px 3px black;
     border-radius: 15px;
 }
-body .content-cms .content-screen .content-products .content-left{
-    width: 40%;
-    height: 100%;
-}
-body .content-cms .content-screen .content-products .content-right{
-    width: 60%;
-    height: 100%;
-}
-body .content-cms .content-screen .content-products .content-right .arriba {
+
+body .content-cms .content-screen .content-products .contenido form {
     width: 100%;
     height: 100%;
-}
-body .content-cms .content-screen .content-products .content-right .arriba form{
-    background-color: #0066ff;
-    width: 100%;
-    height: 100%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding-top: 15px;
-    color: white;
+    display: inline-flex;
 }
 
-body .content-cms .content-screen .content-products .content-right .arriba form .child-form {
-    width: 100%;
-    margin-top: 15px;
-}
-body .content-cms .content-screen .content-products .content-right .arriba form .child-form input {
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    outline: none;
-    margin-top: 10px;
-}
-body .content-cms .content-screen .content-products .content-right .arriba form .child-form input[type="submit"]{
-    width: 50%;
-    margin: 30px auto;
-    display: block;
-    font-weight: bold;
-    font-size: 15px;
-}
-body .content-cms .content-screen .content-products .content-right .arriba form .child-form input[type="submit"]:hover {
-    border: 1px solid black;
-    cursor: pointer;
-}
-body .content-cms .content-screen .content-products .content-right .arriba .close {
-    width: 8%;
-    height: 10%;
-    position: absolute;
-    right: 0;
-}
-body .content-cms .content-screen .content-products .content-right .arriba .close button {
-    width: 100%;
+body .content-cms .content-screen .content-products .contenido form .content-left {
+    width: 40%;
     height: 100%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-body .content-cms .content-screen .content-products .content-right .arriba .close button svg {
-    width: 50%;
-    height: 50%;
-    color: white;
-}
-body .content-cms .content-screen .content-products .content-left .abajo{
     background-color: white;
-    width: 100%;
-    height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    padding-top: 50%;
+    padding-top: 25%;
 }
-body .content-cms .content-screen .content-products .content-left .abajo h3 {
+
+body .content-cms .content-screen .content-products .contenido form .content-left h3 {
     text-align: center;
-    padding: 30px;
+    padding-top: 30px;
 }
-body .content-cms .content-screen .content-products .content-left .abajo .circulo{
-    background-color: white;
-    width: 184px;
-    height: 190px;
+
+body .content-cms .content-screen .content-products .contenido form .content-left .mask-foto {
+    width: 180px;
+    height: 180px;
+    border: 2px dashed black;
     border-radius: 50%;
     margin: auto;
-    border: 3px dashed black;
     padding: 10px;
 }
-body .content-cms .content-screen .content-products .content-left .abajo .circulo .foto{
+
+body .content-cms .content-screen .content-products .contenido form .content-left .mask-foto input {
     background-image: url("../imgs/fotoProducto.png");
     width: 100%;
     height: 100%;
@@ -858,32 +804,46 @@ body .content-cms .content-screen .content-products .content-left .abajo .circul
     border: none;
     cursor: pointer;
 }
-body .content-cms .content-screen .content-products .content-left .abajo .circulo .foto::-webkit-file-upload-button {
+
+body .content-cms .content-screen .content-products .contenido form .content-left .mask-foto input::-webkit-file-upload-button {
     width: 100%;
     height: 100%;
     visibility: hidden;
 }
 
-/* Katerin */
-body .content-cms .content-screen .content-products .content-right .arriba form h3{
+body .content-cms .content-screen .content-products .contenido form .content-right {
+    width: 60%;
+    height: 100%;
+    background-color: #0066ff;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 15px;
+}
+
+body .content-cms .content-screen .content-products .contenido form .content-right h3 {
     color: rgb(250, 243, 242);
     font-size: 27px;
     text-align: center;
 }
-body .content-cms .content-screen .content-products .content-right .arriba form .boxx{
+
+body .content-cms .content-screen .content-products .contenido form .content-right .boxx {
+    width: 100%;
     margin-top: 18px;
 }
-body .content-cms .content-screen .content-products .content-right .arriba form .obj{
+
+body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj {
     width: 100%;
     display: inline-flex;
     padding: 15px;
 }
-body .content-cms .content-screen .content-products .content-right .arriba form .obj .etq{
+
+body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj .etq {
     width: 35%;
     color: white;
     padding-top: 5px;
 }
-body .content-cms .content-screen .content-products .content-right .arriba form .obj input{
+
+body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj input {
     background-color: rgb(235, 238, 235);
     height: 35px;
     width: 65%;
@@ -891,14 +851,16 @@ body .content-cms .content-screen .content-products .content-right .arriba form 
     border: none;
     border-radius: 5px;
 }
-body .content-cms .content-screen .content-products .content-right .arriba form .obj select {
+
+body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj select {
     height: 35px;
     width: 65%;
     border: none;
     border-radius: 5px;
     font-size: 15px;
 }
-body .content-cms .content-screen .content-products .content-right .arriba form .btn{
+
+body .content-cms .content-screen .content-products .contenido form .content-right .boxx .btn {
     background-color: rgb(252, 251, 250);
     width: 125px;
     margin: auto;
@@ -910,22 +872,26 @@ body .content-cms .content-screen .content-products .content-right .arriba form 
     border: none;
     border-radius: 8px;
 }
-body .content-cms .content-screen .content-products .content-right .arriba form .btn:hover {
-    border: 1px solid black;
+
+body .content-cms .content-screen .content-products .contenido form .content-right .boxx .btn:hover {
     cursor: pointer;
+    border: 1px solid black;
 }
-body .content-cms .content-screen .content-products .content-right .arriba .sal{
+
+body .content-cms .content-screen .content-products .contenido .sal {
     width: 40px;
     height: 40px;
     position: absolute;
     right: 0;
+    top: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
 }
+
 @media (max-width: 780px) {
     body .content {
         width: 100%;
