@@ -46,7 +46,7 @@
                             </svg>
                         </div>
                         <div class="right">
-                            <input type="submit" value="Products">
+                            <input type="submit" value="Products" onclick="location.href='cms-products.php'">
                         </div>
                     </div>
                 </li>

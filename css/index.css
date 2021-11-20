@@ -340,6 +340,7 @@ body .content-cms .topbar .content-menu-header {
     width: 100%;
     height: 10%;
     position: fixed;
+    z-index: 1;
     background-color: #0066ff;
     display: inline-flex;
 }
@@ -900,6 +901,8 @@ body .content-cms .content-screen .content-products .contenido .sal {
     body .content-cms {
         display: block;
     }
+
+    
 
     body .content-cms .content-menu,
     body .content-cms .content-screen .content-table .content-header .header-inputs {
