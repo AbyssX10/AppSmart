@@ -628,7 +628,7 @@ body .content-cms .content-screen .content-table .content-body table tbody tr td
 }
 
 body .content-cms .content-screen .content-confirm,
-body .content-cms .content-screen .content-products {
+body .content-cms .content-screen .content-form {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -754,7 +754,7 @@ body .content-cms .content-screen .content-confirm .confirm .confirm-body form i
 }
 
 /* Formulario Productos */
-body .content-cms .content-screen .content-products .contenido{
+body .content-cms .content-screen .content-form .contenido{
     width: 50%;
     height: 90%;
     display: inline-flex;
@@ -763,15 +763,16 @@ body .content-cms .content-screen .content-products .contenido{
     left: 15%;
     box-shadow: 0 0 20px 3px black;
     border-radius: 15px;
+    z-index: 2;
 }
 
-body .content-cms .content-screen .content-products .contenido form {
+body .content-cms .content-screen .content-form .contenido form {
     width: 100%;
     height: 100%;
     display: inline-flex;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-left {
+body .content-cms .content-screen .content-form .contenido form .content-left {
     width: 40%;
     height: 100%;
     background-color: white;
@@ -780,12 +781,12 @@ body .content-cms .content-screen .content-products .contenido form .content-lef
     padding-top: 25%;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-left h3 {
+body .content-cms .content-screen .content-form .contenido form .content-left h3 {
     text-align: center;
     padding-top: 30px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-left .mask-foto {
+body .content-cms .content-screen .content-form .contenido form .content-left .mask-foto {
     width: 180px;
     height: 180px;
     border: 2px dashed black;
@@ -794,7 +795,7 @@ body .content-cms .content-screen .content-products .contenido form .content-lef
     padding: 10px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-left .mask-foto input {
+body .content-cms .content-screen .content-form .contenido form .content-left .mask-foto input {
     background-image: url("../imgs/fotoProducto.png");
     width: 100%;
     height: 100%;
@@ -806,13 +807,13 @@ body .content-cms .content-screen .content-products .contenido form .content-lef
     cursor: pointer;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-left .mask-foto input::-webkit-file-upload-button {
+body .content-cms .content-screen .content-form .contenido form .content-left .mask-foto input::-webkit-file-upload-button {
     width: 100%;
     height: 100%;
     visibility: hidden;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right {
+body .content-cms .content-screen .content-form .contenido form .content-right {
     width: 60%;
     height: 100%;
     background-color: #0066ff;
@@ -821,30 +822,30 @@ body .content-cms .content-screen .content-products .contenido form .content-rig
     padding-top: 15px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right h3 {
+body .content-cms .content-screen .content-form .contenido form .content-right h3 {
     color: rgb(250, 243, 242);
     font-size: 27px;
     text-align: center;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right .boxx {
+body .content-cms .content-screen .content-form .contenido form .content-right .boxx {
     width: 100%;
     margin-top: 18px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj {
+body .content-cms .content-screen .content-form .contenido form .content-right .boxx .obj {
     width: 100%;
     display: inline-flex;
     padding: 15px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj .etq {
+body .content-cms .content-screen .content-form .contenido form .content-right .boxx .obj .etq {
     width: 35%;
     color: white;
     padding-top: 5px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj input {
+body .content-cms .content-screen .content-form .contenido form .content-right .boxx .obj input {
     background-color: rgb(235, 238, 235);
     height: 35px;
     width: 65%;
@@ -853,7 +854,7 @@ body .content-cms .content-screen .content-products .contenido form .content-rig
     border-radius: 5px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right .boxx .obj select {
+body .content-cms .content-screen .content-form .contenido form .content-right .boxx .obj select {
     height: 35px;
     width: 65%;
     border: none;
@@ -861,7 +862,7 @@ body .content-cms .content-screen .content-products .contenido form .content-rig
     font-size: 15px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right .boxx .btn {
+body .content-cms .content-screen .content-form .contenido form .content-right .boxx .btn {
     background-color: rgb(252, 251, 250);
     width: 125px;
     margin: auto;
@@ -874,12 +875,12 @@ body .content-cms .content-screen .content-products .contenido form .content-rig
     border-radius: 8px;
 }
 
-body .content-cms .content-screen .content-products .contenido form .content-right .boxx .btn:hover {
+body .content-cms .content-screen .content-form .contenido form .content-right .boxx .btn:hover {
     cursor: pointer;
     border: 1px solid black;
 }
 
-body .content-cms .content-screen .content-products .contenido .sal {
+body .content-cms .content-screen .content-form .contenido .sal {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -891,6 +892,64 @@ body .content-cms .content-screen .content-products .contenido .sal {
     color: white;
     font-size: 30px;
     font-weight: bold;
+}
+
+body .content-cms .content-screen .content-form .contenido .papa {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #0066ff;
+    border-radius: 15px;
+}
+
+body .content-cms .content-screen .content-form .contenido .papa h2 {
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+body .content-cms .content-screen .content-form .contenido .papa .hijo {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+body .content-cms .content-screen .content-form .contenido .papa .hijo input,
+body .content-cms .content-screen .content-form .contenido .papa .hijo select {
+    border-radius: 5px;
+    width: 75%;
+    padding: 10px;
+    border: none;
+}
+
+body .content-cms .content-screen .content-form .contenido .papa .hijo select {
+    font-size: 15px;
+}
+
+body .content-cms .content-screen .content-form .contenido .papa .hijo label {
+    width: 25%;
+    padding: 10px;
+    color: white
+}
+
+body .content-cms .content-screen .content-form .contenido .papa input[type="submit"]{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    margin: auto;
+    display: block;
+}
+
+body .content-cms .content-screen .content-form .contenido .papa input[type="submit"]:hover {
+    color: #1883ba;
+    background-color: #ffffff;
+    cursor: pointer;
 }
 
 @media (max-width: 780px) {

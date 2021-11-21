@@ -32,6 +32,7 @@
                 include ("Salinas/Views/VTableAdmins.php");
                 include ("Salinas/Views/VTableEmployees.php");
                 include ("Salinas/Views/VTableProviders.php");
+                include("Salinas/Views/VFormUser.php");
                 include ("Salinas/Views/VConfirm.php");
                 include ("Salinas/Views/VConfirmProvider.php");
 

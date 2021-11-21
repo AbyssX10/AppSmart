@@ -1,6 +1,6 @@
-<div class="content-products" id="formprod">
+<div class="content-form" id="formProd">
     <div class="contenido">
-        <button class="sal" onclick="ShowObject('formprod')">x</button>
+        <button class="sal" onclick="ShowObject('formProd')">x</button>
         <form action="<?php echo $_SERVER["REQUEST_URI"]; ?>" method="POST" enctype='multipart/form-data'>
             <div class="content-left">
                 <div class="mask-foto">
@@ -16,21 +16,21 @@
                         <div class="etq">
                             <label for="">Nombre: </label>
                         </div>
-                        <input name="nombreProducto" type="text" placeholder="Producto">
+                        <input name="nombreProducto" type="text" placeholder="Producto" required>
                     </div>
 
                     <div class="obj">
                         <div class="etq">
                             <label for="">Cantidad: </label>
                         </div>
-                        <input name="cantidadProducto" type="number" placeholder="Cantidad">
+                        <input name="cantidadProducto" type="number" placeholder="Cantidad" required>
                     </div>
 
                     <div class="obj">
                         <div class="etq">
                             <label for="">Precio Unitario: </label>
                         </div>
-                        <input name="precioUnitario" type="text" placeholder="Precio">
+                        <input name="precioUnitario" type="text" placeholder="Precio" required>
                     </div>
                     
                     <div class="obj">
@@ -45,7 +45,7 @@
                             <label for="">Proveedor: </label>
                         </div>
 
-                        <select name="provider" id="">
+                        <select name="provider" id="" required>
                             <option value="">Selecciona un proveedor</option>
                             <?php
                             
@@ -71,7 +71,7 @@
                         <option value="Opcion1"></option>
                         </datalist>-->
 
-                        <select name="category" id="">
+                        <select name="category" id="" required>
                         <option value="">Selecciona una categoría</option>
 
                         <?php

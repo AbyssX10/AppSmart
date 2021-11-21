@@ -176,5 +176,41 @@
         }
 
     }
+
+    if (isset($_POST["AddUser"])){
+        $correoUser = $_POST["correoUser"];
+        $passwordUser = md5($_POST["passwordUser"]);
+        $rolUser = $_POST["rolUser"];
+        $dniPerson = $_POST["dniPerson"];
+        $nombrePerson = $_POST["nombrePerson"];
+        $telefonoPerson = $_POST["telefonoPerson"];
+        $direccionPerson = $_POST["direccionPerson"];
+
+        if ($config->RegisterUser($correoUser, $passwordUser, $rolUser, $dniPerson, $nombrePerson, $telefonoPerson, $direccionPerson)){
+            echo "<script>
+                    document.getElementById('mensajeGood').innerHTML = 'Usuario Añadido';
+                    document.getElementById('mensajeGood').style.fontSize = '18px';
+                    document.getElementById('mensajeGood').style.padding = '10px';
+                    document.getElementById('notiGood').style.animation = 'showNoti 0.5s forwards';
+                    
+
+                    setTimeout(() => {
+                        document.getElementById('notiGood').style.animation = 'hideNoti 0.5s forwards';
+                    }, 2000);
+                </script>";
+        } else{ 
+            echo "<script>
+                    document.getElementById('mensajeBad').innerHTML = 'Error con el Usuario';
+                    document.getElementById('mensajeBad').style.fontSize = '15px';
+                    document.getElementById('mensajeBad').style.padding = '15px';
+                    document.getElementById('notiBad').style.animation = 'showNoti 0.5s forwards';
+                    
+
+                    setTimeout(() => {
+                        document.getElementById('notiGood').style.animation = 'hideNoti 0.5s forwards';
+                    }, 2000);
+                </script>";
+        }
+    }
  
 ?>
