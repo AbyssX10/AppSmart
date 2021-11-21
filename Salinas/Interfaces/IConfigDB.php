@@ -81,6 +81,10 @@
          */
         public function DeleteUserByEmail($pTxtCorreo) : bool; /* Fixed */
 
+        public function UpdateUser($pDniPerson, $pNombrePerson, $pTelefonoPerson, $pDireccionPerson, $pRolUser) : bool;
+
+        
+
         /* PROVIDERS */
 
         public function AddProvider($pNombre, $pDireccion, $pCiudad, $pTelefono, $pNombreContacto) : bool;

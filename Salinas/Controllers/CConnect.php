@@ -74,6 +74,15 @@
             }
         }
 
+        private function UpdateUserInfo ($pDniPerson, $pNombrePerson, $pTelefonoPerson, $pDireccionPerson, $pRolUser){
+            if ($this->connect->query("UPDATE users u, person p SET p.nombrePerson='$pNombrePerson', p.telefonoPerson='$pTelefonoPerson', p.direccionPerson='$pDireccionPerson', u.rolUser='$pRolUser' WHERE p.dniPerson='$pDniPerson' AND u.dniPerson='$pDniPerson' ")){
+
+                return true;     
+            } else {
+                return false;
+            }
+        }
+
         // Providers
         private function AddProviderInfo($pNombre, $pDireccion, $pCiudad, $pTelefono, $pNombreContacto){
             if ($this->connect->query("INSERT INTO providers (nombreProveedor, direccionProveedor, ciudadProveedor, telefonoProveedor, nombreContacto) VALUES ('$pNombre', '$pDireccion', '$pCiudad', '$pTelefono', '$pNombreContacto')")){
@@ -197,6 +206,12 @@
         {
             return $this->DeleteUser($pTxtCorreo);
         }
+
+        public function UpdateUser($pDniPerson,$pNombrePerson, $pTelefonoPerson, $pDireccionPerson, $pRolUser): bool{
+             
+            return $this->UpdateUserInfo($pDniPerson,$pNombrePerson, $pTelefonoPerson, $pDireccionPerson, $pRolUser);
+        }
+        
 
         // Providers
         public function AddProvider($pNombre, $pDireccion, $pCiudad, $pTelefono, $pNombreContacto): bool

@@ -45,6 +45,20 @@ function ConfirmProdu(pNombreProducto,pNombreReferencia){
     }
 }
 
+function EditsUser(pDniUsuario,pNombreUsuario,pTelefonoUsuario,pDireccionUsuario){
+    if (document.getElementById('EditsUsers').style.display == 'block'){
+        document.getElementById('EditsUsers').style.display = 'none';
+    } else {
+        document.getElementById('EditsUsers').style.display = 'block';
+        document.getElementById('dniPerson').value = pDniUsuario;
+        document.getElementById('nombrePerson').value = pNombreUsuario;
+        document.getElementById('telefonoPerson').value = pTelefonoUsuario;
+        document.getElementById('direccionPerson').value = pDireccionUsuario;
+        
+    
+    }
+}
+
 function ShowObject(pIdObject){
     if (document.getElementById(pIdObject).style.display == "block"){
         document.getElementById(pIdObject).style.display = "none";

@@ -35,6 +35,7 @@
                 include("Salinas/Views/VFormUser.php");
                 include ("Salinas/Views/VConfirm.php");
                 include ("Salinas/Views/VConfirmProvider.php");
+                include ("Salinas/Views/VEditsUser.php");
 
             ?>
         </div>

@@ -241,4 +241,37 @@
                 </script>";
         }
     }
+
+    if(isset($_POST["EditsUser"]))
+    {
+        if($config->UpdateUser($_POST["dniPerson"],$_POST["nombrePerson"],$_POST["telefonoPerson"],
+        $_POST["direccionPerson"],$_POST["rolUser"])){
+
+            echo "<script>
+            document.getElementById('mensajeGood').innerHTML = 'Usuario Actualizado';
+            document.getElementById('mensajeGood').style.fontSize = '18px';
+            document.getElementById('mensajeGood').style.padding = '10px';
+            document.getElementById('notiGood').style.animation = 'showNoti 0.5s forwards';
+            
+
+            setTimeout(() => {
+                document.getElementById('notiGood').style.animation = 'hideNoti 0.5s forwards';
+            }, 2000);
+         </script>";   
+        }
+        else {
+            echo "<script>
+            document.getElementById('mensajeBad').innerHTML = 'Error con el actualizar';
+            document.getElementById('mensajeBad').style.fontSize = '15px';
+            document.getElementById('mensajeBad').style.padding = '15px';
+            document.getElementById('notiBad').style.animation = 'showNoti 0.5s forwards';
+            
+
+            setTimeout(() => {
+                document.getElementById('notiGood').style.animation = 'hideNoti 0.5s forwards';
+            }, 2000);
+        </script>";
+        }
+    
+    }
 ?>
