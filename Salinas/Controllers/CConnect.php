@@ -152,6 +152,14 @@
                 return null;
             }
         }
+        
+        private function DeleteProducto($pNombre,$pReferencia){
+             if ($this->connect->query("DELETE FROM products WHERE nombreProducto = '$pNombre' AND referenciaProducto = '$pReferencia'")){
+                return true;
+            } else {
+                return false;
+            }
+        }
 
         /* INTERFACE */
 
@@ -236,6 +244,11 @@
         public function GetAllProducts()
         {
             return $this->GetAllProductsInfo();
+        }
+
+        public function DeleteProductByNameAndReference($pNombre,$pReferencia) : bool
+        {
+            return $this->DeleteProducto($pNombre,$pReferencia);
         }
     }
 

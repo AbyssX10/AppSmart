@@ -213,4 +213,32 @@
         }
     }
  
+    if(isset ($_POST["delete-producto"])){
+        if($config->DeleteProductByNameAndReference($_POST["nombreProducto"],$_POST["nombreReferencia"])){
+            echo "<script>
+            document.getElementById('mensajeGood').innerHTML = 'Producto Eliminado';
+            document.getElementById('mensajeGood').style.fontSize = '18px';
+            document.getElementById('mensajeGood').style.padding = '10px';
+            document.getElementById('notiGood').style.animation = 'showNoti 0.5s forwards';
+            
+
+            setTimeout(() => {
+                document.getElementById('notiGood').style.animation = 'hideNoti 0.5s forwards';
+            }, 2000);
+         </script>";
+        }
+        else{
+            echo "<script>
+                    document.getElementById('mensajeBad').innerHTML = 'Error con el Producto';
+                    document.getElementById('mensajeBad').style.fontSize = '15px';
+                    document.getElementById('mensajeBad').style.padding = '15px';
+                    document.getElementById('notiBad').style.animation = 'showNoti 0.5s forwards';
+                    
+
+                    setTimeout(() => {
+                        document.getElementById('notiGood').style.animation = 'hideNoti 0.5s forwards';
+                    }, 2000);
+                </script>";
+        }
+    }
 ?>

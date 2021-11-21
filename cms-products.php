@@ -30,9 +30,8 @@
             <?php
             
                 include ("Salinas/Views/VTableProducts.php");
+                include ("Salinas/Views/VConfirmProdu.php");
                 include ("Salinas/Views/VFormProduct.php");
-                include ("Salinas/Views/VConfirm.php");
-
             ?>
         </div>
     </div>

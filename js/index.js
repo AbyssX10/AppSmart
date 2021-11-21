@@ -33,6 +33,18 @@ function ConfirmProvider(pTxtNombreProveedor, pTxtNombreContacto){
     }
 }
 
+function ConfirmProdu(pNombreProducto,pNombreReferencia){
+    if (document.getElementById('confirm-product').style.display == 'block'){
+        document.getElementById('confirm-product').style.display = 'none';
+    } else {
+        document.getElementById('confirm-product').style.display = 'block';
+        document.getElementById('nombreProducto').innerHTML = pNombreProducto;
+        document.getElementById('nombreProductox').value = pNombreProducto;
+        document.getElementById('nombreReferencia').value = pNombreReferencia;
+    
+    }
+}
+
 function ShowObject(pIdObject){
     if (document.getElementById(pIdObject).style.display == "block"){
         document.getElementById(pIdObject).style.display = "none";

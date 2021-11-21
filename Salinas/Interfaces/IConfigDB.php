@@ -99,6 +99,7 @@
         
         public function AddProduct($pNombre, $pCantidad, $pPrecioUnitario, $pReferencia, $pFoto, $pIdProveedor, $pIdCategoria) : bool;
         public function GetAllProducts();
+        public function DeleteProductByNameAndReference($pNombreProducto,$pReferenciaProducto): bool;
      }
 
 ?>
